@@ -7,10 +7,11 @@
 // import { createWheat } from './seeds/wheat.js'
 // import { addPlant, usePlants } from './field.js'
 // import { plantSeeds } from './tractor.js'
-
+// import { usePlants } from "./field.js"
 // const plantArray = plantSeeds()
 
 export const harvestPlants = (plantArray) => {
+    //const plantArray = usePlants()
     let harvestedSeeds = []
     for (const plant of plantArray) {
         if (plant.type === 'Corn') {
@@ -19,6 +20,7 @@ export const harvestPlants = (plantArray) => {
                 harvestedSeeds.push(plant)
         } 
         } else {
+            let output = plant.output
             for (let i = 0; i < output; i++) {
                 harvestedSeeds.push(plant)
         }
